@@ -34,13 +34,6 @@
     position: relative;
     overflow: hidden;
   }
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: auto 0 0 0;
-    height: 6px;
-    background: var(--accent);
-  }
   .hero-inner { max-width: 1000px; margin: 0 auto; }
   .eyebrow {
     font-size: 0.85rem;
@@ -67,7 +60,6 @@
     flex-wrap: wrap;
     gap: 1.5rem 2.5rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255,255,255,0.2);
   }
   .meta-item .label {
     display: block;
@@ -295,7 +287,7 @@
   <div class="hero-inner">
     <div class="eyebrow">KAUST Academy · HCT Cohort</div>
     <h1>Introduction to Bioinformatics</h1>
-    <p class="hero-sub">A hands-on, two-weekend introduction to the field where biology meets data. Built for students from every background — medicine, engineering, and beyond.</p>
+    <p class="hero-sub">A hands-on and introduction to the field where biology meets data.</p>
     <div class="hero-meta">
       <div class="meta-item">
         <span class="label">Instructor</span>
@@ -303,7 +295,7 @@
       </div>
       <div class="meta-item">
         <span class="label">Dates</span>
-        <span class="value">April 24 – May 2, 2026</span>
+        <span class="value">April 24 – May 16, 2026</span>
       </div>
       <div class="meta-item">
         <span class="label">Format</span>
@@ -321,7 +313,6 @@
   <div class="nav-inner">
     <a href="#about">About</a>
     <a href="#schedule">Schedule</a>
-    <a href="#outline">Outline</a>
     <a href="#day1">Day 1</a>
     <a href="#day2">Day 2</a>
     <a href="#weekend2">Weekend 2</a>
@@ -337,7 +328,6 @@
     <p class="section-sub">What we'll explore together over two weekends.</p>
     <div class="about-text">
       <p>This short course is your first real step into bioinformatics — the computational study of biological data. Over the next two weekends we'll cover what biological sequences are, how they're stored, and how to analyze them using tools that clinicians, researchers, and engineers use every day.</p>
-      <p>No prior programming or biology background is assumed. We'll use Google Colab for all hands-on work, so you only need a laptop and a Google account.</p>
     </div>
   </section>
 
@@ -359,41 +349,28 @@
           <td class="day-label">Weekend 1 · Day 1</td>
           <td class="date">Fri, Apr 24</td>
           <td>Foundations of bioinformatics &amp; biological data</td>
-          <td>Intro to Google Colab &amp; first hands-on</td>
+          <td>Intro to Google Colab &amp; first hands-on &amp; central dogma</td>
         </tr>
         <tr>
           <td class="day-label">Weekend 1 · Day 2</td>
           <td class="date">Sat, Apr 25</td>
-          <td>File formats, command-line concepts, databases</td>
-          <td>Hands-on: working with real sequence data</td>
+          <td>File formats, databases</td>
+          <td>Hands-on: working with real sequence data FASTA format &amp; Databases search</td>
         </tr>
         <tr>
           <td class="day-label">Weekend 2 · Day 3</td>
           <td class="date">Fri, May 1</td>
-          <td>Pairwise alignment &amp; BLAST</td>
-          <td>Hands-on: BLAST searches with NCBI</td>
+          <td>Alignment &amp; Variant Calling</td>
+          <td>Hands-on: Reference genome &amp; annotation</td>
         </tr>
         <tr>
           <td class="day-label">Weekend 2 · Day 4</td>
           <td class="date">Sat, May 2</td>
-          <td>Multiple alignment &amp; phylogenetics</td>
-          <td>Hands-on + introductory assessment</td>
+          <td>FastaQ &amp; Quality control</td>
+          <td>Quality control Hands-on &amp; data quality metrics</td>
         </tr>
       </tbody>
     </table>
-  </section>
-
-  <!-- Course outline -->
-  <section id="outline">
-    <h2>Course Outline</h2>
-    <p class="section-sub">Full overview of what we'll cover over the two weekends.</p>
-    <div class="materials">
-      <div class="material-card">
-        <h3>Course Outline (Word)</h3>
-        <p>The full syllabus and schedule, ready to download or share.</p>
-        <a href="Outline.docx">Download outline →</a>
-      </div>
-    </div>
   </section>
 
   <!-- Day 1 materials -->
@@ -432,21 +409,6 @@
         <a href="Day1_Bioinformatics_Practical.ipynb">Download .ipynb →</a>
       </div>
 
-      <div class="material-card">
-        <h3>NCBI Gene Database</h3>
-        <p>External resource. The database we use for the live demo — great to explore before and between sessions.</p>
-        <a href="https://www.ncbi.nlm.nih.gov/gene/" target="_blank" rel="noopener">Visit NCBI Gene →</a>
-      </div>
-    </div>
-
-    <div class="homework">
-      <h4>Homework for Day 2</h4>
-      <p>Before Saturday's session, please:</p>
-      <ol>
-        <li>Pick a gene that's interesting or relevant to your field of study.</li>
-        <li>Find it on NCBI Gene and read its summary.</li>
-        <li>Bring its accession number to the session (it will look like <code>NM_007294.4</code>).</li>
-      </ol>
     </div>
   </section>
 
@@ -468,6 +430,22 @@
         <span style="margin: 0 0.6rem; color: var(--border);">|</span>
         <a href="Day2_FASTA.ipynb">Download .ipynb →</a>
       </div>
+
+      <div class="material-card">
+        <h3>NCBI Gene Database</h3>
+        <p>External resource. The database we use for the live demo — great to explore before and between sessions.</p>
+        <a href="https://www.ncbi.nlm.nih.gov/gene/" target="_blank" rel="noopener">Visit NCBI Gene →</a>
+      </div>
+    </div>
+
+    <div class="homework">
+      <h4>Homework for Day 2</h4>
+      <p>Before Saturday's session, please:</p>
+      <ol>
+        <li>Pick a gene that's interesting or relevant to your field of study.</li>
+        <li>Find it on NCBI Gene and read its summary.</li>
+        <li>Bring its accession number to the session (it will look like <code>NM_007294.4</code>).</li>
+      </ol>
     </div>
   </section>
 
@@ -502,6 +480,10 @@
         <div class="contact-item">
           <div class="contact-label">Office hours</div>
           <div class="contact-value">By appointment</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Course repository</div>
+          <div class="contact-value"><a href="https://github.com/NorahSAlghamdi/bioinformatics-HCT-Training" target="_blank" rel="noopener" style="color:#fff; text-decoration:none;">GitHub repo →</a></div>
         </div>
       </div>
     </div>
