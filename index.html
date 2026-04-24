@@ -206,6 +206,54 @@
   }
   .material-card.placeholder h3 { color: var(--muted); }
 
+  /* ---------- Teams grid ---------- */
+  .teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+    margin-top: 0.8rem;
+  }
+  .team-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+  }
+  .team-card .team-header {
+    background: var(--primary);
+    color: #fff;
+    padding: 0.9rem 1.2rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+  .team-card.team-2 .team-header { background: var(--secondary); }
+  .team-card.team-3 .team-header { background: var(--accent); color: var(--dark); }
+  .team-card.team-4 .team-header { background: var(--dark); }
+  .team-card ul {
+    list-style: none;
+    padding: 0.8rem 0;
+    margin: 0;
+    flex: 1;
+  }
+  .team-card ul li {
+    padding: 0.55rem 1.2rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+  }
+  .team-card ul li:last-child { border-bottom: none; }
+  .team-card .team-footer {
+    background: #F1F5F9;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-style: italic;
+    border-top: 1px solid var(--border);
+  }
+
   /* ---------- Homework callout ---------- */
   .homework {
     background: var(--card-bg);
@@ -313,6 +361,7 @@
   <div class="nav-inner">
     <a href="#about">About</a>
     <a href="#schedule">Schedule</a>
+    <a href="#teams">Teams</a>
     <a href="#day1">Day 1</a>
     <a href="#day2">Day 2</a>
     <a href="#weekend2">Weekend 2</a>
@@ -327,7 +376,7 @@
     <h2>About this course</h2>
     <p class="section-sub">What we'll explore together over two weekends.</p>
     <div class="about-text">
-      <p>This short course is your first real step into bioinformatics the computational study of biological data. Over the next two weekends we'll cover what biological sequences are, how they're stored, and how to analyze them using tools that clinicians, researchers, and engineers use every day.</p>
+      <p>This short course is your first real step into bioinformatics — the computational study of biological data. Over the next two weekends we'll cover what biological sequences are, how they're stored, and how to analyze them using tools that clinicians, researchers, and engineers use every day.</p>
     </div>
   </section>
 
@@ -371,6 +420,63 @@
         </tr>
       </tbody>
     </table>
+  </section>
+
+  <!-- Teams -->
+  <section id="teams">
+    <h2>Teams</h2>
+    <p class="section-sub">Four teams — each a mix of disciplines so everyone can learn from each other.</p>
+    <div class="teams-grid">
+      <div class="team-card team-1">
+        <div class="team-header">Team 1</div>
+        <ul>
+          <li>Michael Gashaw Tesfaye</li>
+          <li>Anoud Rahamah Haidar Almaazmi</li>
+          <li>Anood Mohammed Ali Alkaabi</li>
+          <li>Naila Hamad Hmoud Alketbi</li>
+          <li>Robe Abate Feyisa Abate</li>
+          <li>Aaesha Mohammed Abdulla Alhammadi</li>
+        </ul>
+        <div class="team-footer">EE · 3× MLS · ME · Nursing</div>
+      </div>
+
+      <div class="team-card team-2">
+        <div class="team-header">Team 2</div>
+        <ul>
+          <li>Amanuel Alebachew Sahilu</li>
+          <li>Jawaher Saeed Abdelrahman Alzarooni</li>
+          <li>Sara Abdulla Hasan Almarzooqi</li>
+          <li>Bethel Yohannes</li>
+          <li>Ghala Aman Ali Qayed</li>
+          <li>Fatima Ahmed Mubarak Ahmed</li>
+        </ul>
+        <div class="team-footer">2× EE · 3× MLS · Nursing</div>
+      </div>
+
+      <div class="team-card team-3">
+        <div class="team-header">Team 3</div>
+        <ul>
+          <li>Yishak Fantahun Desta</li>
+          <li>Mariam Faisal Mesaeid Alhosani</li>
+          <li>Aisha Yousif Ahmed Alhosani</li>
+          <li>Hessa Obaid Juma Al Ali</li>
+          <li>Hind Rasheed Awad Ba Qehaizel</li>
+        </ul>
+        <div class="team-footer">EE · 2× MLS · EMS · Vet. Medicine</div>
+      </div>
+
+      <div class="team-card team-4">
+        <div class="team-header">Team 4</div>
+        <ul>
+          <li>Sultan Salem Rashed Alalawi</li>
+          <li>Alyamama Khaled Abdulla Al Hanaei</li>
+          <li>Noorah Hamad Mohammedadhim Maksi</li>
+          <li>Misgana Damtew</li>
+          <li>Awatif Ismail Abdalla Alblooshi</li>
+        </ul>
+        <div class="team-footer">EE · 2× MLS · Medical Imaging · Vet. Science</div>
+      </div>
+    </div>
   </section>
 
   <!-- Day 1 materials -->
